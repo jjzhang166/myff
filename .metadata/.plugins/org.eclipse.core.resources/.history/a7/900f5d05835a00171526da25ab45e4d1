@@ -1,0 +1,73 @@
+//============================================================================
+// Name        : ff_basic_player.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+
+extern "c"
+{
+#include "libavcodec/avcodec.h"
+#include "libavformat/avformat.h"
+#include "libswscale/swscale.h"
+#include "libavutil/imgutils.h"
+#include "SDL2/SDL.h"
+
+}
+#define ERR_EXIT {perror("err:"),exit(-1);}
+
+
+int main(int argc,char * argv[]) {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+
+	av_register_all();
+	AVFormatContext *avFormatContext = avformat_alloc_context();
+	if(avformat_open_input(&avFormatContext,argv[1],NULL,NULL)!=0)
+		ERR_EXIT;
+	if(avformat_find_stream_info(avFormatContext,NULL)<0)
+		ERR_EXIT;
+	int videoindex=-1;
+	for(int i=0;i<avFormatContext->nb_streams;i++)
+	{
+		if(avFormatContext->streams[i]->codec->codec_type==AVMEDIA_TYPE_VIDEO)
+			videoindex = i;
+		break;
+	}
+	if(videoindex==-1)
+	{
+		printf("Can't found video stream!\n");
+		ERR_EXIT;
+	}
+
+	AVCodecContext* avCodecContex  = avFormatContext->streams[videoindex]->codec;
+	AVCodec * pCodec = avcodec_find_decoder(avCodecContex->codec_id);
+
+	if(pCodec==NULL)
+		ERR_EXIT;
+	if(avcodec_open2(avCodecContex,pCodec,NULL)<0){
+		ERR_EXIT;
+	}
+	AVFrame * pframe = 	av_frame_alloc();
+	AVFrame * pframeYUV = 	av_frame_alloc();
+
+	char* out_buffer=(char*)av_malloc(av_image_get_buffer_size(\
+			AV_PIX_FMT_YUV420P,avCodecContex->width,avCodecContex->height,1));
+
+
+
+	av_frame_free(pframe);
+	av_frame_free(pframeYUV);
+
+
+
+
+
+	avformat_free_context(avFormatContext);
+
+	return 0;
+}

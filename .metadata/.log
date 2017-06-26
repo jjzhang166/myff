@@ -1,0 +1,13 @@
+!SESSION 2017-06-26 22:38:28.877 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=zh_CN
+Framework arguments:  /home/hxh/now_working/work_av
+Command-line arguments:  -os linux -ws gtk -arch x86 /home/hxh/now_working/work_av
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-06-26 22:39:22.669
+!MESSAGE Indexed 'ff_videoinfo' (1 sources, 100 headers) in 1.94 sec: 8,186 declarations; 14,250 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.01%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-06-26 22:43:15.923
+!MESSAGE Indexed 'ff_basic_player' (1 sources, 100 headers) in 1.16 sec: 8,186 declarations; 14,250 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.01%)

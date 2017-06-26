@@ -1,0 +1,37 @@
+//============================================================================
+// Name        : ff_basic_player.cpp
+// Author      : 
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+
+extern "c"
+{
+#include "libavcodec/avcodec.h"
+#include "libavformat/avformat.h"
+#include "libswscale/swscale.h"
+#include "libavutil/imgutils.h"
+#include "SDL2/SDL.h"
+
+}
+#define ERR_EXIT {perror("err:"),exit(-1);}
+
+
+int main(int argc,char * argv[]) {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+
+	av_register_all();
+	AVFormatContext *avFormatContext = avformat_alloc_context();
+	if(avformat_open_input(&avFormatContext,argv[1],NULL,NULL)!=0)
+	ERR_EXIT;
+
+
+	avformat_free_context(avFormatContext);
+
+	return 0;
+}

@@ -1,0 +1,16 @@
+c_keyword=255,0,0
+c_type=255,0,0
+eclipse.preferences.version=1
+scalability.numberOfLines=5000000
+semanticHighlighting.externalSDK.color=128,0,128
+semanticHighlighting.function.color=0,0,255
+semanticHighlighting.function.enabled=true
+semanticHighlighting.functionDeclaration.color=0,0,255
+semanticHighlighting.macroDefinition.color=139,105,20
+semanticHighlighting.macroDefinition.enabled=true
+semanticHighlighting.macroSubstitution.color=139,105,20
+semanticHighlighting.macroSubstitution.enabled=true
+sourceHoverBackgroundColor=252,252,252
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

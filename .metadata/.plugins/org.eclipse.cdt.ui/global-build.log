@@ -1,0 +1,79 @@
+22:43:17 **** Build of configuration Debug for project ff_basic_player ****
+make all 
+Building file: ../src/ff_basic_player.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ff_basic_player.d" -MT"src/ff_basic_player.d" -o "src/ff_basic_player.o" "../src/ff_basic_player.cpp"
+Finished building: ../src/ff_basic_player.cpp
+ 
+Building target: ff_basic_player
+Invoking: GCC C++ Linker
+g++  -o "ff_basic_player"  ./src/ff_basic_player.o   
+Finished building target: ff_basic_player
+ 
+22:43:19 **** Incremental Build of configuration Debug for project ff_basic_player ****
+make all 
+make: 没有什么可以做的为 `all'。
+01:21:08 **** Incremental Build of configuration Debug for project ff_basic_player ****
+make all 
+Building file: ../src/ff_basic_player.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/ff_basic_player.d" -MT"src/ff_basic_player.d" -o "src/ff_basic_player.o" "../src/ff_basic_player.cpp"
+../src/ff_basic_player.cpp: In function ‘int main(int, char**)’:
+../src/ff_basic_player.cpp:89:30: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for (i = 0; i < pFormatCtx->nb_streams; i++)
+                              ^
+../src/ff_basic_player.cpp:56:11: warning: variable ‘sdlRect’ set but not used [-Wunused-but-set-variable]
+  SDL_Rect sdlRect;
+           ^
+../src/ff_basic_player.cpp:57:14: warning: variable ‘video_tid’ set but not used [-Wunused-but-set-variable]
+  SDL_Thread *video_tid;
+              ^
+Finished building: ../src/ff_basic_player.cpp
+ 
+Building target: ff_basic_player
+Invoking: GCC C++ Linker
+g++  -o "ff_basic_player"  ./src/ff_basic_player.o   
+./src/ff_basic_player.o：在函数‘sfp_refresh_thread(void*)’中：
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:26：对‘SDL_PushEvent’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:28：对‘SDL_Delay’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:35：对‘SDL_PushEvent’未定义的引用
+./src/ff_basic_player.o：在函数‘main’中：
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:73：对‘av_register_all’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:74：对‘avformat_network_init’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:78：对‘avformat_alloc_context’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:80：对‘avformat_open_input’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:84：对‘avformat_find_stream_info’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:101：对‘av_dump_format’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:109：对‘avcodec_find_decoder’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:114：对‘avcodec_open2’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:118：对‘av_frame_alloc’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:119：对‘av_frame_alloc’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:122：对‘av_image_get_buffer_size’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:125：对‘av_malloc’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:127：对‘av_image_fill_arrays’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:133：对‘sws_getContext’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:140：对‘SDL_Init’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:141：对‘SDL_GetError’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:149：对‘SDL_CreateWindow’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:152：对‘SDL_GetError’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:155：对‘SDL_CreateRenderer’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:159：对‘SDL_CreateTexture’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:166：对‘av_malloc’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:168：对‘SDL_CreateThread’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:174：对‘SDL_WaitEvent’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:177：对‘av_read_frame’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:185：对‘avcodec_decode_video2’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:194：对‘sws_scale’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:197：对‘SDL_UpdateTexture’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:198：对‘SDL_RenderClear’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:200：对‘SDL_RenderCopy’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:201：对‘SDL_RenderPresent’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:204：对‘av_free_packet’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:217：对‘sws_freeContext’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:219：对‘SDL_Quit’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:221：对‘av_frame_free’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:222：对‘av_frame_free’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:223：对‘avcodec_close’未定义的引用
+/home/hxh/now_working/work_av/ff_basic_player/Debug/../src/ff_basic_player.cpp:224：对‘avformat_close_input’未定义的引用
+collect2: error: ld returned 1 exit status
+make: *** [ff_basic_player] 错误 1
